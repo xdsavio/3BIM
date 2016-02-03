@@ -14,9 +14,7 @@ import edu.ifpb.br.asynctask.activity.CalcularPerfilAntropometrico;
 import edu.ifpb.br.asynctask.util.HttpService;
 import edu.ifpb.br.asynctask.util.Response;
 
-/**
- * Created by Matheus on 02/02/2016.
- */
+
 public class CalcularPAntroAsyncTask extends AsyncTask<JSONObject, Void, Response>{
     Context context;
 
@@ -47,7 +45,7 @@ public class CalcularPAntroAsyncTask extends AsyncTask<JSONObject, Void, Respons
 
             int status = response.getStatusCodeHttp();
 
-            if (status == 202) {
+            if (status == 200) {
 
                 JSONObject json = new JSONObject(response.getContentValue());
 
