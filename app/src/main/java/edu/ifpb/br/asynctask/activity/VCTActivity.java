@@ -40,8 +40,7 @@ public class VCTActivity extends Activity implements View.OnClickListener {
         RadioGroup radioNivelEsporte = (RadioGroup) findViewById(R.id.radioNivelEsporte);
         RadioGroup radioSexo = (RadioGroup) findViewById(R.id.radioSexo);
 
-        // Calcular o VCT
-        // .
+     
         Log.i("NotificationWearApp", "Clique no botão da AsyncTask");
 
         JSONObject regulus = new JSONObject();
