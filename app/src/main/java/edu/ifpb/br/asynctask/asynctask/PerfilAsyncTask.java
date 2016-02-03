@@ -15,10 +15,10 @@ import edu.ifpb.br.asynctask.util.HttpService;
 import edu.ifpb.br.asynctask.util.Response;
 
 
-public class CalcularPAntroAsyncTask extends AsyncTask<JSONObject, Void, Response>{
+public class PerfilAsyncTask extends AsyncTask<JSONObject, Void, Response>{
     Context context;
 
-    public CalcularPAntroAsyncTask(Context context) {
+    public PerfilAsyncTask(Context context) {
         this.context = context;
     }
 
