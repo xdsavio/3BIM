@@ -13,11 +13,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * Created by Matheus on 02/02/2016.
- */
+
 public class HttpService {
-    // IP da máquina onde se encontra o servidor. response
+
     private static final String URL_CONTEXT = "http://ladoss.com.br:8443/NutrIF_service/";
 
     public static HttpURLConnection sendGetRequest(String service)
