@@ -38,25 +38,21 @@ public class IMCActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
 
-        // Calcular o IMC.
         Log.i("NotificationWearApp", "Clique no botão da AsyncTask");
 
-        JSONObject geral = new JSONObject();
+        JSONObject regulus = new JSONObject();
 
         try {
-            // Peso
             EditText pesoEditText = (EditText) findViewById(R.id.pesoEditText);
             String peso = pesoEditText.getText().toString();
-            geral.put("peso", peso);
+            regulus.put("peso", peso);
 
-            // Altura
             EditText alturaEditText = (EditText) findViewById(R.id.alturaEditText);
             String altura = alturaEditText.getText().toString();
-            geral.put("altura", altura);
+            regulus.put("altura", altura);
 
-            //Enviar os dados de geral para o AsyncTask
             IMCAsyncTask IMCAsyncTask = new IMCAsyncTask(this);
-            IMCAsyncTask.execute(geral);
+            IMCAsyncTask.execute(regulus);
 
         } catch (JSONException e) {
             e.printStackTrace();
