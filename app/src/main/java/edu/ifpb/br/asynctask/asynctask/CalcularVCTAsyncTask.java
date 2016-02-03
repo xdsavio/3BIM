@@ -14,14 +14,12 @@ import java.net.HttpURLConnection;
 import edu.ifpb.br.asynctask.util.HttpService;
 import edu.ifpb.br.asynctask.util.Response;
 
-/**
- * Created by Matheus on 02/02/2016.
- */
-public class CalcularVCTAsyncTask extends AsyncTask<JSONObject, Void, Response> {
+
+public class VCTAsyncTask extends AsyncTask<JSONObject, Void, Response> {
 
     Context context;
 
-    public CalcularVCTAsyncTask(Context context) {
+    public VCTAsyncTask(Context context) {
         this.context = context;
     }
 
@@ -46,7 +44,7 @@ public class CalcularVCTAsyncTask extends AsyncTask<JSONObject, Void, Response> 
 
             int status = response.getStatusCodeHttp();
 
-            if (status == 202) {
+            if (status == 200) {
 
                 JSONObject json = new JSONObject(response.getContentValue());
 
