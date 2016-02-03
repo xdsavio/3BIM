@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AsyncTask</string>
+    <string name="calcularIMCButton">Calcular IMC</string>
+    <string name="pesoTextView">Peso</string>
+    <string name="alturaTextView">Altura</string>
+    <string name="calcularVCTButton">Calcular VCT</string>
+    <string name="calcularPerfilAntropometrico">Calcular Perfil Antropometrico</string>
+    <string name="nivelEsporte1">Nível 1</string>
+    <string name="nivelEsporte2">Nível 2</string>
+    <string name="nivelEsporte3">Nível 3</string>
+    <string name="dtNascimentoTextViewVCT">Data Nascimento</string>
+    <string name="radioSexoMasculino">M</string>
+    <string name="radioSexoFeminimo">F</string>
+    <string name="pesoTextViewPerfilAntropometrico">Peso</string>
+</resources>

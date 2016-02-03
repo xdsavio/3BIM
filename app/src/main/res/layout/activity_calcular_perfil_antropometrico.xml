@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    tools:context="edu.ifpb.br.asynctask.activity.CalcularPerfilAntropometrico"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/pesoTextViewPerfilAntropometrico"
+        android:text="@string/pesoTextViewPerfilAntropometrico"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/pesoEditTextPerfilAntropometrico"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"/>
+
+    <TextView
+        android:id="@+id/alturaTextViewPerfilAntropometrico"
+        android:text="@string/alturaTextView"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/alturaEditTextPerfilAntropometrico"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"/>
+
+    <TextView
+        android:id="@+id/dataNascimentoTextViewPerfilAntropometrico"
+        android:text="@string/dtNascimentoTextViewVCT"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/dataNascimentoEditTextPerfilAntropometrico"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"/>
+
+    <RadioGroup
+        android:id="@+id/radioSexoPerfilAntropometrico"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton android:id="@+id/radioSexoPerfilAntropometricoMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioSexoMasculino"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton android:id="@+id/radioSexoPerfilAntropometricoFeminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioSexoFeminimo"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/calcularPerfilAntropometricoButton"
+        android:layout_below="@id/alturaEditText"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/calcularVCTButton"
+        android:textSize="15sp"
+        android:layout_weight="0.02" />
+
+
+
+</LinearLayout>
