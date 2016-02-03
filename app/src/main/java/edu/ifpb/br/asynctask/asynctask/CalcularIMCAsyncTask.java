@@ -14,9 +14,7 @@ import java.net.HttpURLConnection;
 import edu.ifpb.br.asynctask.util.HttpService;
 import edu.ifpb.br.asynctask.util.Response;
 
-/**
- * Created by Matheus on 02/02/2016.
- */
+
 public class CalcularIMCAsyncTask extends AsyncTask <JSONObject, Void, Response> {
 
     Context context;
@@ -49,7 +47,7 @@ public class CalcularIMCAsyncTask extends AsyncTask <JSONObject, Void, Response>
 
             int status = response.getStatusCodeHttp();
 
-            if (status == 202) {
+            if (status == 200) {
 
                 JSONObject json = new JSONObject(response.getContentValue());
 
