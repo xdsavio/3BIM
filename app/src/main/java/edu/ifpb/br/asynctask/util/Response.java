@@ -1,8 +1,6 @@
 package edu.ifpb.br.asynctask.util;
 
-/**
- * Created by Matheus on 02/02/2016.
- */
+
 public class Response {
 
     private int statusCodeHttp;
