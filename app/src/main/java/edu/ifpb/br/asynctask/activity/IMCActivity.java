@@ -25,15 +25,15 @@ import edu.ifpb.br.asynctask.asynctask.*;
 
 import edu.ifpb.br.asynctask.R;
 
-public class CalcularIMCActivity extends Activity implements View.OnClickListener{
+public class IMCActivity extends Activity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calcular_imc);
 
-        Button calcularIMCButton = (Button) findViewById(R.id.calcularIMCButton);
-        calcularIMCButton.setOnClickListener(this);
+        Button imcButton = (Button) findViewById(R.id.calcularIMCButton);
+        imcButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -55,8 +55,8 @@ public class CalcularIMCActivity extends Activity implements View.OnClickListene
             geral.put("altura", altura);
 
             //Enviar os dados de geral para o AsyncTask
-            CalcularIMCAsyncTask calcularIMCAsyncTask = new CalcularIMCAsyncTask(this);
-            calcularIMCAsyncTask.execute(geral);
+            IMCAsyncTask IMCAsyncTask = new IMCAsyncTask(this);
+            IMCAsyncTask.execute(geral);
 
         } catch (JSONException e) {
             e.printStackTrace();
