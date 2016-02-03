@@ -11,7 +11,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.ifpb.br.asynctask.R;
-import edu.ifpb.br.asynctask.asynctask.CalcularPAntroAsyncTask;
+import edu.ifpb.br.asynctask.asynctask.PerfilAsyncTask;
 
 public class CalcularPerfilAntropometrico extends Activity implements View.OnClickListener{
 
@@ -58,8 +58,8 @@ public class CalcularPerfilAntropometrico extends Activity implements View.OnCli
             regulus.put("entrevistado", entrevistado);
            
 
-            CalcularPAntroAsyncTask calcularPAntroAsyncTask = new CalcularPAntroAsyncTask(this);
-            calcularPAntroAsyncTask.execute(geral);
+            PerfilAsyncTask PerfilAsyncTask = new PerfilAsyncTask(this);
+            PerfilAsyncTask.execute(geral);
 
         } catch (JSONException e) {
             e.printStackTrace();
