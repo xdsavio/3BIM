@@ -15,11 +15,11 @@ import edu.ifpb.br.asynctask.util.HttpService;
 import edu.ifpb.br.asynctask.util.Response;
 
 
-public class CalcularIMCAsyncTask extends AsyncTask <JSONObject, Void, Response> {
+public class IMCAsyncTask extends AsyncTask <JSONObject, Void, Response> {
 
     Context context;
 
-    public CalcularIMCAsyncTask(Context context) {
+    public IMCAsyncTask(Context context) {
 
         this.context = context;
     }
