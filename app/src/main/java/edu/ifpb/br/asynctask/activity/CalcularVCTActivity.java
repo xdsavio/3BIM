@@ -23,7 +23,7 @@ import edu.ifpb.br.asynctask.asynctask.CalcularVCTAsyncTask;
 import edu.ifpb.br.asynctask.R;
 import edu.ifpb.br.asynctask.asynctask.*;
 
-public class CalcularVCTActivity extends Activity implements View.OnClickListener {
+public class VCTActivity extends Activity implements View.OnClickListener {
 
 
     @Override
@@ -31,8 +31,8 @@ public class CalcularVCTActivity extends Activity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calcular_vctactivity);
 
-        Button calcularVCTButton = (Button) findViewById(R.id.calcularVCTButton);
-        calcularVCTButton.setOnClickListener(this);
+        Button VCTButton = (Button) findViewById(R.id.calcularVCTButton);
+        VCTButton.setOnClickListener(this);
 
     }
     @Override
@@ -81,8 +81,8 @@ public class CalcularVCTActivity extends Activity implements View.OnClickListene
             geral.put("entrevistado", entrevistado);
             //Enviar os dados de geral para o AsyncTask
 
-            CalcularVCTAsyncTask calcularVCTAsyncTask = new CalcularVCTAsyncTask(this);
-            calcularVCTAsyncTask.execute(geral);
+            VCTAsyncTask calcularVCTAsyncTask = new VCTAsyncTask(this);
+            VCTAsyncTask.execute(geral);
 
         } catch (JSONException e) {
             e.printStackTrace();
