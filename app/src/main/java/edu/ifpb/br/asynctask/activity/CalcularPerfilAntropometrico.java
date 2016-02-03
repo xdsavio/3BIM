@@ -29,35 +29,34 @@ public class CalcularPerfilAntropometrico extends Activity implements View.OnCli
     public void onClick(View v) {
         RadioGroup radioSexo = (RadioGroup) findViewById(R.id.radioSexoPerfilAntropometrico);
 
-        JSONObject geral = new JSONObject();
+        JSONObject regulus = new JSONObject();
 
         try {
-            // Peso
+            
             EditText pesoEditText = (EditText) v.findViewById(R.id.pesoEditTextPerfilAntropometrico);
             String peso = pesoEditText.getText().toString();
-            geral.put("peso", peso);
+            regulus.put("peso", peso);
 
-            // Altura
+            
             EditText alturaEditText = (EditText) v.findViewById(R.id.alturaEditTextPerfilAntropometrico);
             String altura = alturaEditText.getText().toString();
-            geral.put("altura", altura);
+            regulus.put("altura", altura);
 
-            //Entrevistado
+            
             JSONObject entrevistado = new JSONObject();
 
-            //Sexo do Entrevistado
+            
             int selectedID = radioSexo.getCheckedRadioButtonId();
             radioSexo = (RadioGroup) findViewById(selectedID);
             String sexo = radioSexo.toString();
             entrevistado.put("sexo", sexo);
 
-            //Data de Nascimento
             EditText dataNascimentoEditTextPerfilAntropometrico = (EditText) v.findViewById(R.id.dataNascimentoEditTextPerfilAntropometrico);
             String dataNascimento = dataNascimentoEditTextPerfilAntropometrico.getText().toString();
             entrevistado.put("dataNascimento", dataNascimento);
 
-            geral.put("entrevistado", entrevistado);
-            //Enviar os dados de geral para o AsyncTask
+            regulus.put("entrevistado", entrevistado);
+           
 
             CalcularPAntroAsyncTask calcularPAntroAsyncTask = new CalcularPAntroAsyncTask(this);
             calcularPAntroAsyncTask.execute(geral);
