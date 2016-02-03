@@ -44,45 +44,38 @@ public class VCTActivity extends Activity implements View.OnClickListener {
         // .
         Log.i("NotificationWearApp", "Clique no botão da AsyncTask");
 
-        JSONObject geral = new JSONObject();
+        JSONObject regulus = new JSONObject();
 
         try {
-            // Peso
             EditText pesoEditText = (EditText) v.findViewById(R.id.pesoEditText);
             String peso = pesoEditText.getText().toString();
-            geral.put("peso", peso);
+            regulus.put("peso", peso);
 
-            // Altura
             EditText alturaEditText = (EditText) v.findViewById(R.id.alturaEditText);
             String altura = alturaEditText.getText().toString();
-            geral.put("altura", altura);
+            regulus.put("altura", altura);
 
-            //Nível Esporte
             int selectedId = radioNivelEsporte.getCheckedRadioButtonId();
             radioNivelEsporte = (RadioGroup) findViewById(selectedId);
             String nivelEsporte = radioNivelEsporte.toString();
 
-            geral.put("nivelEsporte", nivelEsporte);
+            regulus.put("nivelEsporte", nivelEsporte);
 
-            //Entrevistado
             JSONObject entrevistado = new JSONObject();
 
-            //Sexo do Entrevistado
             int selectedID = radioSexo.getCheckedRadioButtonId();
             radioSexo = (RadioGroup) findViewById(selectedID);
             String sexo = radioSexo.toString();
             entrevistado.put("sexo", sexo);
 
-            //Data de Nascimento
             EditText dtNascimentoEditViewVCT = (EditText) v.findViewById(R.id.dtNascimentoEditViewVCT);
             String dataNascimento = dtNascimentoEditViewVCT.getText().toString();
             entrevistado.put("dataNascimento", dataNascimento);
 
-            geral.put("entrevistado", entrevistado);
-            //Enviar os dados de geral para o AsyncTask
+            regulus.put("entrevistado", entrevistado);
 
             VCTAsyncTask calcularVCTAsyncTask = new VCTAsyncTask(this);
-            VCTAsyncTask.execute(geral);
+            VCTAsyncTask.execute(regulus);
 
         } catch (JSONException e) {
             e.printStackTrace();
