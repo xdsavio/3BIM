@@ -22,6 +22,7 @@ public class VCTAsyncTask extends AsyncTask<JSONObject, Void, Response> {
     public VCTAsyncTask(Context context) {
         this.context = context;
     }
+    //
 
     protected Response doInBackground(JSONObject... valores) {
 
